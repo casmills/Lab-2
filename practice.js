@@ -4,6 +4,7 @@
 
 function first(inputArray) {
   //Code here
+  let firstItem = inputArray[0]
   return firstItem;
 }
 
@@ -13,6 +14,7 @@ function first(inputArray) {
 
 function getLength(inputArray) {
   //Code here
+  arrayLength = inputArray.length
   return arrayLength;
 }
 
@@ -22,6 +24,7 @@ function getLength(inputArray) {
 
 function last(inputArray) {
   //Code here
+  lastItem = inputArray[inputArray.length - 1]
   return lastItem;
 }
 
@@ -31,6 +34,7 @@ function last(inputArray) {
 
 function addItem(inputArray, num) {
   //Code here
+  inputArray.push(num)
   return inputArray;
 }
 
@@ -40,6 +44,7 @@ function addItem(inputArray, num) {
 
 function removeLast(inputArray) {
   //Code here
+  inputArray.pop()
   return inputArray;
 }
 
@@ -49,6 +54,7 @@ function removeLast(inputArray) {
 
 function removeFirst(inputArray) {
   //Code here
+  inputArray.shift()
   return inputArray;
 }
 
@@ -59,6 +65,8 @@ function removeFirst(inputArray) {
 
 function replaceFirstAndLast(inputArray) {
   //Code here
+  inputArray[0] = 42
+  inputArray[inputArray.length -1] = 42
   return inputArray;
 }
 
@@ -73,7 +81,10 @@ function replaceFirstAndLast(inputArray) {
 function addTen(inputArray) {
   let newArr = [];
   // Code here
-
+for(let num of inputArray){
+  let newNum = num + 10
+  newArr.push (newNum) 
+}
   return newArr;
 }
 
@@ -84,7 +95,7 @@ function addTen(inputArray) {
 function count31() {
   let numbers = [];
   // Code here
-
+for(let n = 0; n=>31; n++){numbers.push(n)}
   return numbers;
 }
 
@@ -135,6 +146,11 @@ function backwards(inputArray) {
 
 function findInArray(inputArray, value) {
   // Code here
+let valueFound = false;
+const idx = inputArray.indexOf(value);
+if(idx >=0){
+  valueFound = true;
+}  
   return valueFound;
 }
 
